@@ -1,0 +1,33 @@
+<div class="h-16 w-screen fixed px-2 z-50 shadow-xl bg-white dark:bg-dark">
+  <nav class="flex flex-row-reverse sm:flex-row justify-between items-center px-2">
+    <div class="h-16">
+      <a [href]="goToIndex">
+        <img class="h-full p-2" src="assets/logo/logo.png" alt="logo"/>
+      </a>
+    </div>
+
+    <!--mobile navbar-->
+    <div (click)="this.showMenu = !this.showMenu" class="sm:hidden ">
+
+      <div class="rotate-scale-up" [ngClass]="this.showMenu ? 'hidden': 'block'">
+        <i class="fas fa-bars fa-2x"></i>
+      </div>
+
+      <div class="rotate-scale-up" [ngClass]="!this.showMenu ? 'hidden': 'block'">
+        <i class="fas fa-times fa-2x"></i>
+      </div>
+    </div>
+
+    <ul
+      [ngClass]="showMenu ? 'absolute top-14 left-0 bg-white pt-5 pb-7 border-bottom-gray w-full shadow-lg bg-white dark:bg-dark' : 'hidden sm:flex'"
+      class="flex flex-col sm:flex-row items-center"
+      (click)="showMenu=false"
+    >
+      <li class="scale-up-center px-1 py-1" *ngFor="let route of routes">
+        <a (click)="scroll(route.url)" [href]="route.url" [title]="route.name" class="px-2">{{route.name}}</a>
+      </li>
+    </ul>
+
+  </nav>
+
+</div>
