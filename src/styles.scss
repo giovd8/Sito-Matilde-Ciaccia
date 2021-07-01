@@ -32,3 +32,21 @@ i {
   @apply py-8 px-4 sm:px-36 bg-white dark:bg-dark text-justify;
 }
 
+//parallax effect
+
+.parallax-wrapper {
+  @apply h-screen overflow-x-hidden overflow-y-auto;
+  perspective: 2px;
+}
+
+.section {
+  @apply h-screen relative flex items-center justify-center;
+}
+
+.parallax::after {
+  @apply absolute inset-0;
+  content: " ";
+  transform: translateZ(-1px) scale(1.5);
+  z-index: -1;
+}
+

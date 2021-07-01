@@ -1,11 +1,20 @@
-.background-dark {
+.background-dark::after {
   background-image: url("../../../../../../assets/images/home-dark.jpg");
   background-position: center;
   background-size: cover;
 }
 
-.background-light {
+.background-light::after {
   background-image: url("../../../../../../assets/images/home-light.jpg");
   background-position: center;
   background-size: cover;
 }
+
+.static {
+  background: red;
+}
+
+.bg2::after {
+  background-image: url('https://placekitten.com/g/800/600');
+}
+
