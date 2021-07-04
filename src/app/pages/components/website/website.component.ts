@@ -14,7 +14,9 @@ export class WebsiteComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    AOS.init();
+    const body = document.querySelector('body') as HTMLElement;
+    body.style.overflowY = 'hidden';
+    body.style.position = 'fixed';
   }
 
 }
