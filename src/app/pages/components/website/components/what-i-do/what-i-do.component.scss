@@ -1,8 +1,8 @@
 .item-container {
-  @apply flex flex-col items-center w-full sm:w-1/2 max-w-md;
+  @apply flex flex-col items-center w-full sm:w-1/2 max-w-sm;
 }
 
 .item-description {
-  @apply text-center text-xl sm:text-2xl pt-3 pb-8;
+  @apply text-center text-lg sm:text-xl pt-3 pb-8;
 }
 

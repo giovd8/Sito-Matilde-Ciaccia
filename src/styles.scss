@@ -40,6 +40,10 @@ i {
   @apply py-8 px-4 sm:px-36 bg-white dark:bg-dark text-justify;
 }
 
+.custom-container-opacity {
+  @apply px-6 sm:px-20 py-6 bg-white dark:bg-dark opacity-80;
+}
+
 //parallax effect
 
 .parallax-wrapper {

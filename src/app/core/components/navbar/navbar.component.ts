@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {SwitchThemeService} from "../../../shared/services/switch-theme.service";
+import {SwitchThemeService} from '../../../shared/services/switch-theme.service';
+import {Router} from "@angular/router";
 
 type Routes = {
   name: string,
@@ -27,22 +28,31 @@ export class NavbarComponent implements OnInit {
       url: '#about-me'
     },
     {
-      name: 'Contatti',
-      url: '#contacts'
-    },
-    {
       name: 'Agevolazioni & FAQs',
       url: '#faqs'
+    },
+    {
+      name: 'Contatti',
+      url: '#contacts'
     }
   ];
 
-  constructor(public switchThemeServices: SwitchThemeService) { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
   public scroll(route: string): void {
-    document.querySelector(route).scrollIntoView();
+    const currentRoute = this.router.url;
+    if (!currentRoute.includes('index')) {
+      this.router.navigate(['index']);
+      setTimeout(() => {
+        document.querySelector(route).scrollIntoView({behavior: 'smooth', block: 'end', inline: 'nearest'});
+      }, 50);
+    }
+    else {
+      document.querySelector(route).scrollIntoView({behavior: 'smooth', block: 'end', inline: 'nearest'});
+    }
   }
 
 

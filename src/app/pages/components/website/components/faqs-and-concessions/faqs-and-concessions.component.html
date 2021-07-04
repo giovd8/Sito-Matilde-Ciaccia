@@ -1,0 +1,21 @@
+<div id="faqs" class="section parallax background-faq pt-96">
+  <div class="custom-container-opacity">
+      <h1 class="custom-text-green">Agevolazioni e FAQs</h1>
+      <h2>Alcune risposte alle tue domande</h2>
+
+      <div *ngFor="let item of faqsAndConcessions" class="mt-10">
+
+        <div [ngClass]="item.isClicked? 'flip-vertical-right' : 'flip-vertical-left'" class="custom-card" (click)="item.isClicked=!item.isClicked">
+          <ng-container *ngIf="!item.isClicked">
+            <i class="{{item.icon}} fa-2x"></i>
+            <h2>{{item.shortText}}</h2>
+          </ng-container>
+          <ng-container *ngIf="item.isClicked">
+            <h2>{{item.longText}}</h2>
+          </ng-container>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
