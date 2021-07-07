@@ -21,11 +21,11 @@ h2 {
 }
 
 p {
-  @apply text-justify text-xl sm:text-2xl py-1;
+  @apply text-justify text-base sm:text-xl py-1;
 }
 
 .custom-link {
-  @apply text-center custom-text-green text-2xl sm:text-3xl py-3;
+  @apply text-center custom-text-green py-3;
 }
 
 i {
@@ -37,7 +37,7 @@ i {
 }
 
 .custom-container {
-  @apply py-8 px-4 sm:px-36 bg-white dark:bg-dark text-justify;
+  @apply px-4 pt-12 pb-20 sm:px-36 bg-white dark:bg-dark text-justify;
 }
 
 .custom-container-opacity {

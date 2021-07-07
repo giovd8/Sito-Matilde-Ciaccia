@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -8,7 +8,7 @@ import 'aos/dist/aos.css';
   templateUrl: './website.component.html',
   styleUrls: ['./website.component.scss']
 })
-export class WebsiteComponent implements OnInit {
+export class WebsiteComponent implements OnInit, OnDestroy {
 
   constructor() {
   }
@@ -17,6 +17,12 @@ export class WebsiteComponent implements OnInit {
     const body = document.querySelector('body') as HTMLElement;
     body.style.overflowY = 'hidden';
     body.style.position = 'fixed';
+  }
+
+  ngOnDestroy(): void {
+    const body = document.querySelector('body') as HTMLElement;
+    body.style.overflowY = 'scroll';
+    body.style.position = 'relative';
   }
 
 }
