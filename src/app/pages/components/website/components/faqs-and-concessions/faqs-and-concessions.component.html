@@ -1,18 +1,24 @@
-<div id="faqs" class="section parallax background-faq pt-96">
-  <div class="custom-container-opacity">
+<div id="faqs" class="section parallax mt-96 background-faq">
+  <div class="custom-container-opacity w-screen">
       <h1 class="custom-text-green">Agevolazioni e FAQs</h1>
       <h2>Alcune risposte alle tue domande</h2>
 
       <div *ngFor="let item of faqsAndConcessions" class="mt-10">
 
-        <div [ngClass]="item.isClicked? 'flip-vertical-right' : 'flip-vertical-left'" class="custom-card" (click)="item.isClicked=!item.isClicked">
-          <ng-container *ngIf="!item.isClicked">
-            <i class="{{item.icon}} fa-2x"></i>
-            <h2>{{item.shortText}}</h2>
-          </ng-container>
-          <ng-container *ngIf="item.isClicked">
-            <h2>{{item.longText}}</h2>
-          </ng-container>
+        <div class="custom-card" (click)="item.isClicked=!item.isClicked">
+
+          <div *ngIf="!item.isClicked" class="flip-vertical-left">
+            <i class="{{item.icon}} fa-2x bg-white dark:bg-dark"></i>
+            <h2 class="relative bottom-10">{{item.shortText}}</h2>
+          </div>
+
+          <div *ngIf="item.isClicked" class="flip-vertical-left">
+            <p>{{item.longText}}</p>
+            <p *ngIf="item.navigatePage !== ''" class="custom-link" (click)="router.navigate([item.navigatePage])">
+              Maggiori informazioni
+            </p>
+          </div>
+
         </div>
 
       </div>

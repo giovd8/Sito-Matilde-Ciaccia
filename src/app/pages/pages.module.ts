@@ -9,10 +9,14 @@ import { AboutMeInDeptComponent } from './components/website/components/about-me
 import { WhatIDoComponent } from './components/website/components/what-i-do/what-i-do.component';
 import { FaqsAndConcessionsComponent } from './components/website/components/faqs-and-concessions/faqs-and-concessions.component';
 import { ContactsComponent } from './components/website/components/contacts/contacts.component';
+import { InsuranceComponent } from './components/website/components/faqs-and-concessions/components/insurance/insurance.component';
+import { FaqsQuestionsComponent } from './components/website/components/faqs-and-concessions/components/faqs-questions/faqs-questions.component';
 
 const routes: Routes = [
   {path: 'index', component: WebsiteComponent},
   {path: 'about-me', component: AboutMeInDeptComponent},
+  {path: 'insurance', component: InsuranceComponent},
+  {path: 'faqs', component: FaqsQuestionsComponent},
   {path: '', redirectTo: 'index', pathMatch: 'full'},
 ];
 
@@ -24,7 +28,9 @@ const routes: Routes = [
     AboutMeInDeptComponent,
     WhatIDoComponent,
     FaqsAndConcessionsComponent,
-    ContactsComponent
+    ContactsComponent,
+    InsuranceComponent,
+    FaqsQuestionsComponent
   ],
   imports: [
     CommonModule,
