@@ -5,7 +5,7 @@
 }
 
 .custom-card {
-  @apply border rounded-lg p-6 mb-16;
+  @apply border rounded-lg p-4 mb-12 w-full max-w-xl;
   border-color: var(--green-mati);
 }
 

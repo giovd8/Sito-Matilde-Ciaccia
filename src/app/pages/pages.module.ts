@@ -11,6 +11,7 @@ import { FaqsAndConcessionsComponent } from './components/website/components/faq
 import { ContactsComponent } from './components/website/components/contacts/contacts.component';
 import { InsuranceComponent } from './components/website/components/faqs-and-concessions/components/insurance/insurance.component';
 import { FaqsQuestionsComponent } from './components/website/components/faqs-and-concessions/components/faqs-questions/faqs-questions.component';
+import { TreatedProblemsComponent } from './components/website/components/treated-problems/treated-problems.component';
 
 const routes: Routes = [
   {path: 'index', component: WebsiteComponent},
@@ -30,7 +31,8 @@ const routes: Routes = [
     FaqsAndConcessionsComponent,
     ContactsComponent,
     InsuranceComponent,
-    FaqsQuestionsComponent
+    FaqsQuestionsComponent,
+    TreatedProblemsComponent
   ],
   imports: [
     CommonModule,
