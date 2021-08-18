@@ -9,18 +9,18 @@
     <!--mobile navbar-->
     <div (click)="this.showMenu = !this.showMenu" class="sm:hidden ">
 
-      <div class="rotate-scale-up" [ngClass]="this.showMenu ? 'hidden': 'block'">
+      <div class="rotate-scale-up absolute top-4" [ngClass]="this.showMenu ? 'hidden': 'block'">
         <i class="fas fa-bars fa-2x"></i>
       </div>
 
-      <div class="rotate-scale-up" [ngClass]="!this.showMenu ? 'hidden': 'block'">
+      <div class="rotate-scale-up absolute top-4 z-40" [ngClass]="!this.showMenu ? 'hidden': 'block'">
         <i class="fas fa-times fa-2x"></i>
       </div>
     </div>
 
     <ul
-      [ngClass]="showMenu ? 'absolute top-14 left-0 bg-white pt-5 pb-7 border-bottom-gray w-full shadow-lg bg-white dark:bg-dark slide-bottom' : 'hidden sm:flex'"
-      class="flex flex-col sm:flex-row items-center"
+      [ngClass]="showMenu ? 'absolute top-14 left-0 pt-5 pb-7 border-bottom-gray w-full shadow-lg bg-white dark:bg-dark slide-bottom' : 'hidden sm:flex'"
+      class="flex flex-col sm:flex-row items-center z-30"
       (click)="showMenu=false"
     >
       <li class="scale-up-center px-1 py-1" *ngFor="let route of routes">

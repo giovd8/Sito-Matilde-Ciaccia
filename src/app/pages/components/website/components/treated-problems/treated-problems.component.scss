@@ -39,7 +39,7 @@
 }
 
 .custom-card-item {
-  @apply flex px-2 py-2 flex-1 items-center;
+  @apply flex px-2 py-2 flex-1 items-center max-w-lg;
 }
 
 .section-title {

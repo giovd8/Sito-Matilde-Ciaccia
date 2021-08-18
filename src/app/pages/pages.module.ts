@@ -5,7 +5,7 @@ import { WebsiteComponent } from './components/website/website.component';
 import {RouterModule, Routes} from '@angular/router';
 import {SharedModule} from '../shared/shared.module';
 import { AboutMeComponent } from './components/website/components/about-me/about-me.component';
-import { AboutMeInDeptComponent } from './components/website/components/about-me-in-dept/about-me-in-dept.component';
+import { AboutMeInDeptComponent } from './components/website/components/about-me/components/about-me-in-dept/about-me-in-dept.component';
 import { WhatIDoComponent } from './components/website/components/what-i-do/what-i-do.component';
 import { FaqsAndConcessionsComponent } from './components/website/components/faqs-and-concessions/faqs-and-concessions.component';
 import { ContactsComponent } from './components/website/components/contacts/contacts.component';
