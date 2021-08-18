@@ -62,7 +62,7 @@ i {
 }
 
 .section {
-  @apply h-screen relative flex items-center justify-center;
+  @apply h-screen relative flex items-center justify-center pt-10;
 }
 
 .parallax::after {

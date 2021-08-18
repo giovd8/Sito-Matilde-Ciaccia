@@ -35,7 +35,7 @@
 }
 
 .images-container {
-  @apply p-6 w-full flex items-center justify-center;
+  @apply p-6 sm:p-10 w-full flex items-center justify-center;
 }
 
 .custom-card-item {
@@ -44,9 +44,10 @@
 
 .section-title {
   color: var(--green-mati);
-  @apply text-justify pb-1 text-lg font-light;
+  @apply text-justify pb-1 text-lg sm:text-2xl font-light;
 }
 
 .section-item {
-  @apply font-extralight;
+  @apply font-extralight text-base sm:text-xl;
+
 }

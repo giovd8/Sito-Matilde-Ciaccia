@@ -18,6 +18,7 @@ const routes: Routes = [
   {path: 'about-me', component: AboutMeInDeptComponent},
   {path: 'insurance', component: InsuranceComponent},
   {path: 'faqs', component: FaqsQuestionsComponent},
+
   {path: '', redirectTo: 'index', pathMatch: 'full'},
 ];
 

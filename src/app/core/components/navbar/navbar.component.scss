@@ -1,6 +1,8 @@
 li:hover {
   color: var(--green-mati);
   border-color: var(--green-mati);
+  transform: scale(1.1);
+  transition: transform 0.1s ease-in-out;
   @apply border-b-2 rounded-sm;
 }
 
@@ -36,33 +38,6 @@ li:hover {
   100% {
     -webkit-transform: scale(1) rotateZ(360deg);
     transform: scale(1) rotateZ(360deg);
-  }
-}
-
-.scale-up-center:hover {
-  -webkit-animation: scale-up-center 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-  animation: scale-up-center 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-}
-
-@-webkit-keyframes scale-up-center {
-  0% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-  100% {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-  }
-}
-
-@keyframes scale-up-center {
-  0% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-  100% {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
   }
 }
 
