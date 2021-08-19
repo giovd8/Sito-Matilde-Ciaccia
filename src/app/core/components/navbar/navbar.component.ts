@@ -28,8 +28,12 @@ export class NavbarComponent implements OnInit {
       url: '#about-me'
     },
     {
+      name: 'Problemi trattati',
+      url: '#problemi-trattati'
+    },
+    {
       name: 'Agevolazioni & FAQs',
-      url: '#faqs'
+      url: '#faqs-concessions'
     },
     {
       name: 'Contatti',

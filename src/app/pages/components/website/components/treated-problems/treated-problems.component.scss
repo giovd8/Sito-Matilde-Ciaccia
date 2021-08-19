@@ -35,7 +35,7 @@
 }
 
 .images-container {
-  @apply p-6 sm:p-10 w-full flex items-center justify-center;
+  @apply px-6 py-12 md:py-24 w-full flex items-center justify-center;
 }
 
 .custom-card-item {
@@ -49,5 +49,8 @@
 
 .section-item {
   @apply font-extralight text-base sm:text-xl;
+}
 
+.anchor {
+  @apply relative bottom-40;
 }

@@ -25,7 +25,7 @@ p {
 }
 
 .custom-link {
-  @apply text-center custom-text-green py-3;
+  @apply text-center custom-text-green py-3 cursor-pointer;
 }
 
 i {
@@ -41,8 +41,25 @@ i {
 }
 
 .custom-container-opacity {
-  @apply px-6 sm:px-16 py-6 bg-white dark:bg-dark opacity-80;
+  @apply px-6 sm:px-10 md:px-16 py-6 bg-white dark:bg-dark opacity-80;
 }
+
+.custom-shadow-bottom {
+  -webkit-box-shadow: 0px 3px 15px 0px rgba(50, 50, 50, 0.1);
+  -moz-box-shadow: 0px 3px 15px 0px rgba(50, 50, 50, 0.1);
+  box-shadow: 0px 3px 15px 0px rgba(50, 50, 50, 0.1);
+}
+
+.custom-shadow-top {
+  -webkit-box-shadow: 0px -3px 15px 0px rgba(50, 50, 50, 0.1);
+  -moz-box-shadow: 0px -3px 15px 0px rgba(50, 50, 50, 0.1);
+  box-shadow: 0px -3px 15px 0px rgba(50, 50, 50, 0.1);
+}
+
+.custom-subpage-title {
+  @apply font-normal pt-4 pb-0;
+}
+
 //
 //.custom-card {
 //  @apply border rounded-lg p-6 mb-10 w-full sm:w-1/2 mx-0 sm:mx-2;

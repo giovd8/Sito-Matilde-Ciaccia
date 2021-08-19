@@ -1,11 +1,11 @@
-<div id="faqs" class="section parallax mt-96 background-faq">
+<div id="faqs-concessions" class="section parallax mt-96 background-faq">
   <div class="custom-container-opacity w-screen">
       <h1 class="custom-text-green">Agevolazioni e FAQs</h1>
       <h2>Alcune risposte alle tue domande</h2>
 
       <div *ngFor="let item of faqsAndConcessions" class="mt-10 flex justify-center">
 
-        <div class="custom-card" (click)="item.isClicked=!item.isClicked">
+        <div class="custom-card" (click)="item.isClicked=!item.isClicked" [id]="item.id">
 
           <div *ngIf="!item.isClicked" class="flip-vertical-left">
             <i class="{{item.icon}} fa-2x bg-white dark:bg-dark"></i>
