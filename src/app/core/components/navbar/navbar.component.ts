@@ -32,6 +32,10 @@ export class NavbarComponent implements OnInit {
       url: '#problemi-trattati'
     },
     {
+      name: 'Servizi',
+      url: '#servizi-offerti'
+    },
+    {
       name: 'Agevolazioni & FAQs',
       url: '#faqs-concessions'
     },
@@ -48,6 +52,10 @@ export class NavbarComponent implements OnInit {
 
   public scroll(route: string): void {
     const currentRoute = this.router.url;
+    const menuButton = document.querySelector('#menu-botton') as HTMLButtonElement;
+    if (menuButton) {
+      menuButton.click();
+    }
     if (!currentRoute.includes('index')) {
       this.router.navigate(['index']);
       setTimeout(() => {

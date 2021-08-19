@@ -18,6 +18,12 @@ import { AdolescenzaEGenitorialitaComponent } from './components/website/compone
 import { DipendenzaSessualeComponent } from './components/website/components/treated-problems/components/dipendenza-sessuale/dipendenza-sessuale.component';
 import { DipendenzaDaInternetComponent } from './components/website/components/treated-problems/components/dipendenza-da-internet/dipendenza-da-internet.component';
 import { DipendenzaAffettivaComponent } from './components/website/components/treated-problems/components/dipendenza-affettiva/dipendenza-affettiva.component';
+import { ServiziCheOffroComponent } from './components/website/components/servizi-che-offro/servizi-che-offro.component';
+import { ConsulenzaPsicologicaEOnlineComponent } from './components/website/components/servizi-che-offro/components/consulenza-psicologica-e-online/consulenza-psicologica-e-online.component';
+import { SostegnoPsicologicoComponent } from './components/website/components/servizi-che-offro/components/sostegno-psicologico/sostegno-psicologico.component';
+import { ValutazionePsicodiagnosticaComponent } from './components/website/components/servizi-che-offro/components/valutazione-psicodiagnostica/valutazione-psicodiagnostica.component';
+import { ParentTrainingComponent } from './components/website/components/servizi-che-offro/components/parent-training/parent-training.component';
+import { PercorsoCrescitaPersonaleComponent } from './components/website/components/servizi-che-offro/components/percorso-crescita-personale/percorso-crescita-personale.component';
 
 const routes: Routes = [
   {path: 'index', component: WebsiteComponent},
@@ -28,6 +34,11 @@ const routes: Routes = [
   {path: 'problemi-di-coppia/dipendenza-affettiva', component: DipendenzaAffettivaComponent},
   {path: 'dipendenza-da-sostanze', component: DipendenzaDaSostanzeComponent},
   {path: 'adoloscenza-e-genitorialita', component: AdolescenzaEGenitorialitaComponent},
+  {path: 'servizi-offerti/consulenza-psicologica', component: ConsulenzaPsicologicaEOnlineComponent},
+  {path: 'servizi-offerti/sostegno-psicologico', component: SostegnoPsicologicoComponent},
+  {path: 'servizi-offerti/valutazione-psicodiagnostica', component: ValutazionePsicodiagnosticaComponent},
+  {path: 'servizi-offerti/parent-training', component: ParentTrainingComponent},
+  {path: 'servizi-offerti/crescita-personale', component: PercorsoCrescitaPersonaleComponent},
   {path: 'insurance', component: InsuranceComponent},
   {path: 'faqs', component: FaqsQuestionsComponent},
   {path: '', redirectTo: 'index', pathMatch: 'full'},
@@ -50,7 +61,13 @@ const routes: Routes = [
     AdolescenzaEGenitorialitaComponent,
     DipendenzaSessualeComponent,
     DipendenzaDaInternetComponent,
-    DipendenzaAffettivaComponent
+    DipendenzaAffettivaComponent,
+    ServiziCheOffroComponent,
+    ConsulenzaPsicologicaEOnlineComponent,
+    SostegnoPsicologicoComponent,
+    ValutazionePsicodiagnosticaComponent,
+    ParentTrainingComponent,
+    PercorsoCrescitaPersonaleComponent
   ],
   imports: [
     CommonModule,
