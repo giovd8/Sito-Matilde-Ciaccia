@@ -59,11 +59,11 @@ export class NavbarComponent implements OnInit {
     if (!currentRoute.includes('index')) {
       this.router.navigate(['index']);
       setTimeout(() => {
-        document.querySelector(route).scrollIntoView({behavior: 'smooth', block: 'end', inline: 'nearest'});
+        document.querySelector(route)?.scrollIntoView({behavior: 'smooth', block: 'end', inline: 'nearest'});
       }, 50);
     }
     else {
-      document.querySelector(route).scrollIntoView({behavior: 'smooth', block: 'end', inline: 'nearest'});
+      document.querySelector(route)?.scrollIntoView({behavior: 'smooth', block: 'end', inline: 'nearest'});
     }
   }
 

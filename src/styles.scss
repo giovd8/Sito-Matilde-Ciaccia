@@ -1,8 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
-/* You can add global styles to this file, and also import other style files */
-@import "assets/fontawesome-pro/css/all.min.css";
+//@import 'node_modules/font-awesome/css/font-awesome.css';
+//@import 'assets/font-awesome-4.7.0/css/font-awesome.min.css';
+
+//
+//:root {
+//  --dark-color: #2b2b2b;
+//}
+//
+//$dark: #2b2b2b;
+
 
 :root {
   --green-mati: #a0bd60;
@@ -28,20 +37,21 @@ p {
   @apply text-center custom-text-green py-3 cursor-pointer;
 }
 
-i {
-  color: var(--green-mati);
-}
+//i, svg {
+//  color: var(--green-mati);
+//}
 
 .custom-text-green {
   color: var(--green-mati);
 }
 
 .custom-container {
-  @apply px-4 pt-12 pb-20 sm:px-36 bg-white dark:bg-dark text-justify;
+  @apply px-6 sm:px-10 md:px-16 py-6 bg-white dark:bg-dark;
 }
 
 .custom-container-opacity {
   @apply px-6 sm:px-10 md:px-16 py-6 bg-white dark:bg-dark opacity-80;
+
 }
 
 .custom-shadow-bottom {
@@ -60,15 +70,28 @@ i {
   @apply font-normal pt-4 pb-0;
 }
 
-//
-//.custom-card {
-//  @apply border rounded-lg p-6 mb-10 w-full sm:w-1/2 mx-0 sm:mx-2;
-//  border-color: var(--green-mati);
-//}
-//
-//.custom-card-item {
-//  @apply flex px-2 py-2 flex-1 items-center justify-between;
-//}
+.section-title {
+  color: var(--green-mati);
+  @apply text-justify pb-1 text-lg sm:text-2xl font-light;
+}
+
+.section-item {
+  @apply font-extralight text-base sm:text-xl;
+}
+
+.card-image-container {
+  @apply px-6 py-12 md:py-24 w-full flex items-center justify-center;
+}
+
+.custom-card-item {
+  @apply flex px-2 py-2 flex-1 items-center max-w-lg;
+}
+
+.custom-card-bordered{
+  @apply border w-full max-w-4xl;
+  border-color: var(--green-mati);
+}
+
 
 
 //parallax effect
@@ -79,7 +102,7 @@ i {
 }
 
 .section {
-  @apply h-screen relative flex items-center justify-center pt-10;
+  @apply min-h-screen relative flex items-center justify-center pt-10;
 }
 
 .parallax::after {
@@ -88,4 +111,3 @@ i {
   transform: translateZ(-1px) scale(1.5);
   z-index: -1;
 }
-

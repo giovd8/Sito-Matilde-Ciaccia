@@ -1,0 +1,39 @@
+.bg-dipendenze-conportamentali {
+  background-image: url("../../../../../../assets/images/dipendenze-comportamentali.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.bg-disturbi-del-comportamento-alimentare {
+  background-image: url("../../../../../../assets/images/disturbi-del-comportamento-alimentare.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-problemi-di-coppia {
+  background-image: url("../../../../../../assets/images/problemi-di-coppia.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-dipendenza-da-sostanze {
+  background-image: url("../../../../../../assets/images/dipendenza-da-sostanze.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-adoloscenza-e-genitorialita {
+  background-image: url("../../../../../../assets/images/adoloscenza-e-genitorialità.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-consulenza-tecnica {
+  background-image: url("../../../../../../assets/images/consulenza-tecnica.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.anchor {
+  @apply relative bottom-40;
+}

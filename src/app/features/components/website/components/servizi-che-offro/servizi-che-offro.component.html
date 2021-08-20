@@ -1,0 +1,32 @@
+<div class="bg-white dark:bg-dark pt-24 sm:pt-36" id="servizi-offerti">
+  <h1 class="custom-text-green py-8">Servizi offerti</h1>
+  <div class="grid grid-cols-1 sm:grid-cols-2">
+    <div>
+      <div class="card-image-container bg-attivita-clinica">
+        <div class="custom-container-opacity max-w-xl w-full">
+          <div class="section-title">Attività clinica</div>
+          <div class="section-item custom-text-green cursor-pointer" (click)="router.navigate(['servizi-offerti/consulenza-psicologica'])">Consulenza psicologica e online</div>
+          <div class="section-item custom-text-green cursor-pointer" (click)="router.navigate(['servizi-offerti/sostegno-psicologico'])">Sostegno psicologico</div>
+          <div class="section-item custom-text-green cursor-pointer" (click)="router.navigate(['servizi-offerti/valutazione-psicodiagnostica'])">Valutazione psicodiagnostica</div>
+          <div class="section-item custom-text-green cursor-pointer" (click)="router.navigate(['servizi-offerti/parent-training'])">Parent training</div>
+          <div class="section-item custom-text-green cursor-pointer" (click)="router.navigate(['servizi-offerti/crescita-personale'])">Percorso psicologico di crescita personale </div>
+
+  <!--        <div class="section-item custom-text-green cursor-pointer" (click)="router.navigate(['servizi-offerti/consulenza-psicologica'])">Maggiori informazioni</div>-->
+        </div>
+      </div>
+    </div>
+
+    <div>
+    <div class="card-image-container bg-attivita-forense">
+      <div class="custom-container-opacity max-w-xl w-full">
+        <div class="section-title">Attività forense</div>
+        <div class="section-item">Colloqui di valutazione delle competenze genitoriali</div>
+        <div class="section-item">Colloqui con minori</div>
+        <div class="section-item">Valutazione psicodiagnostica</div>
+        <div class="section-item">Stesura relaziuone</div>
+  <!--      <div class="section-item custom-text-green cursor-pointer" (click)="router.navigate(['disturbi-del-comportamento-alimentare'])">Maggiori informazioni</div>-->
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
