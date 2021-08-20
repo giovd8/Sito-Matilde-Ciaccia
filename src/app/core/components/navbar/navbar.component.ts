@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {SwitchThemeService} from '../../../shared/services/switch-theme.service';
 import {Router} from "@angular/router";
+import {DeviceDetectorService} from "ngx-device-detector";
 
 type Routes = {
   name: string,
@@ -45,14 +46,14 @@ export class NavbarComponent implements OnInit {
     }
   ];
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, public deviceDetectorService: DeviceDetectorService) { }
 
   ngOnInit(): void {
   }
 
   public scroll(route: string): void {
     const currentRoute = this.router.url;
-    const menuButton = document.querySelector('#menu-botton') as HTMLButtonElement;
+    const menuButton = document.querySelector('#menu-button') as HTMLButtonElement;
     if (menuButton) {
       menuButton.click();
     }

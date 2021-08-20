@@ -34,7 +34,7 @@ p {
 }
 
 .custom-link {
-  @apply text-center custom-text-green py-3 cursor-pointer;
+  @apply custom-text-green cursor-pointer inline-block;
 }
 
 //i, svg {
@@ -72,11 +72,11 @@ p {
 
 .section-title {
   color: var(--green-mati);
-  @apply text-justify pb-1 text-lg sm:text-2xl font-light;
+  @apply text-justify pb-4 text-lg sm:text-2xl font-light;
 }
 
 .section-item {
-  @apply font-extralight text-base sm:text-xl;
+  @apply font-extralight text-base sm:text-xl pb-2;
 }
 
 .card-image-container {

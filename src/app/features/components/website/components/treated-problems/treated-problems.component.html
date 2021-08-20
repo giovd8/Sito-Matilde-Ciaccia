@@ -5,8 +5,12 @@
       <div class="custom-container-opacity max-w-xl w-full">
         <div class="section-title">Dipendenze comportamentali</div>
         <div id="dipendenze-comportamentali" class="anchor"></div>
-        <div class="section-item custom-text-green cursor-pointer" (click)="router.navigate(['dipendenze-comportamentali/dipendenza-sessuale'])">Dipendenza sessuale</div>
-        <div class="section-item custom-text-green cursor-pointer" (click)="router.navigate(['dipendenze-comportamentali/dipendenza-da-internet'])">Dipendenza da internet</div>
+        <div class="section-item">
+          <div class="custom-link" (click)="router.navigate(['dipendenze-comportamentali/dipendenza-sessuale'])">Dipendenza sessuale</div>
+        </div>
+        <div class="section-item">
+          <div class="custom-link" (click)="router.navigate(['dipendenze-comportamentali/dipendenza-da-internet'])">Dipendenza da internet</div>
+        </div>
         <div class="section-item">Dipendenza da gioco d'azzardo</div>
       </div>
     </div>
@@ -16,14 +20,18 @@
         <div class="section-item">Anoressia</div>
         <div class="section-item">Bulimia</div>
         <div class="section-item">Binge-eating</div>
-        <div class="section-item custom-text-green cursor-pointer" (click)="router.navigate(['disturbi-del-comportamento-alimentare'])">Maggiori informazioni</div>
+        <div class="section-item">
+          <div class="custom-link" (click)="router.navigate(['disturbi-del-comportamento-alimentare'])">Maggiori informazioni</div>
+        </div>
       </div>
     </div>
     <div class="card-image-container bg-problemi-di-coppia" id="problemi-di-coppia">
       <div class="custom-container-opacity max-w-xl w-full">
         <div class="section-title custom-link">Problemi di coppia</div>
         <div class="section-item">Conflitti di coppia</div>
-        <div class="section-item custom-text-green cursor-pointer" (click)="router.navigate(['problemi-di-coppia/dipendenza-affettiva'])">Dipendenza affettiva</div>
+        <div class="section-item">
+          <div class="custom-link" (click)="router.navigate(['problemi-di-coppia/dipendenza-affettiva'])">Dipendenza affettiva</div>
+        </div>
         <div class="section-item">Violenza domestica</div>
 
       </div>
@@ -34,7 +42,9 @@
         <div class="section-item">Alcol</div>
         <div class="section-item">Cocaina</div>
         <div class="section-item">Altre sostanze psicoattive</div>
-        <div class="section-item custom-text-green cursor-pointer" (click)="router.navigate(['dipendenza-da-sostanze'])">Maggiori informazioni</div>
+        <div class="section-item">
+          <div class="custom-link" (click)="router.navigate(['dipendenza-da-sostanze'])">Maggiori informazioni</div>
+        </div>
       </div>
     </div>
     <div class="card-image-container bg-adoloscenza-e-genitorialita" id="adoloscenza-e-genitorialita">
@@ -43,7 +53,9 @@
         <div class="section-item">Hikkikomori</div>
         <div class="section-item">Cyber-bullismo</div>
         <div class="section-item">Sexting</div>
-        <div class="section-item custom-text-green cursor-pointer" (click)="router.navigate(['adoloscenza-e-genitorialita'])">Maggiori informazioni</div>
+        <div class="section-item">
+          <div class="custom-link" (click)="router.navigate(['adoloscenza-e-genitorialita'])">Maggiori informazioni</div>
+        </div>
       </div>
     </div>
     <div class="card-image-container bg-consulenza-tecnica">

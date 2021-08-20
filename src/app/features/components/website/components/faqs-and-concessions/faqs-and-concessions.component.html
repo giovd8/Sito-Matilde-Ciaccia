@@ -7,14 +7,14 @@
 
         <div class="custom-container custom-card-bordered" (click)="item.isClicked=!item.isClicked" [id]="item.id">
 
-          <div *ngIf="!item.isClicked" class="flipInY">
+          <div *ngIf="!item.isClicked" class="flip-2-ver-right-1 h-20 sm:h-32 flex items-center justify-center">
 <!--            <i class="{{item.icon}} fa-2x bg-white dark:bg-dark"></i>-->
-            <h2 class="relative bottom-10">{{item.shortText}}</h2>
+            <h2>{{item.shortText}}</h2>
           </div>
 
-          <div *ngIf="item.isClicked" class="flipInY">
+          <div *ngIf="item.isClicked" class="flip-2-ver-right-1 flex flex-col items-center">
             <p>{{item.longText}}</p>
-            <p *ngIf="item.navigatePage !== ''" class="custom-link" (click)="router.navigate([item.navigatePage])">
+            <p *ngIf="item.navigatePage !== ''" class="custom-link inline-block" (click)="router.navigate([item.navigatePage])">
               Maggiori informazioni
             </p>
           </div>
