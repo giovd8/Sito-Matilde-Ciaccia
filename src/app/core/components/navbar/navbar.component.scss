@@ -54,8 +54,17 @@
   stroke-width: 6;
 }
 
+.mobile-navbar {
+  @apply absolute inset-x-0 top-14 pt-5 pb-7 shadow-lg;
+}
 
-li:hover {
+.desktop-navbar {
+  @apply sm:relative sm:w-auto sm:right-4 sm:top-0 sm:p-0 sm:shadow-none;
+  //animation: none!important;
+}
+
+
+.menu-item:hover {
   color: var(--green-mati);
   border-color: var(--green-mati);
   transform: scale(1.1);
@@ -96,22 +105,22 @@ li:hover {
 
 @-webkit-keyframes slide-top {
   0% {
-    -webkit-transform: translateY(100%);
-    transform: translateY(100%);
-  }
-  100% {
     -webkit-transform: translateY(-100px);
     transform: translateY(-100px);
+  }
+  100% {
+    -webkit-transform: translateY(-130%);
+    transform: translateY(-130%);
   }
 }
 @keyframes slide-top {
   0% {
-    -webkit-transform: translateY(100%);
-    transform: translateY(100%);
-  }
-  100% {
     -webkit-transform: translateY(-100px);
     transform: translateY(-100px);
+  }
+  100% {
+    -webkit-transform: translateY(-130%);
+    transform: translateY(-130%);
   }
 }
 

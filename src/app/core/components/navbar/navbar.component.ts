@@ -52,6 +52,7 @@ export class NavbarComponent implements OnInit {
   }
 
   public scroll(route: string): void {
+    // this.showMenu = false;
     const currentRoute = this.router.url;
     const menuButton = document.querySelector('#menu-button') as HTMLButtonElement;
     if (menuButton) {

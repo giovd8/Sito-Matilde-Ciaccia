@@ -39,8 +39,8 @@ const routes: Routes = [
   {path: 'servizi-offerti/valutazione-psicodiagnostica', component: ValutazionePsicodiagnosticaComponent},
   {path: 'servizi-offerti/parent-training', component: ParentTrainingComponent},
   {path: 'servizi-offerti/crescita-personale', component: PercorsoCrescitaPersonaleComponent},
-  {path: 'insurance', component: InsuranceComponent},
-  {path: 'faqs', component: FaqsQuestionsComponent},
+  {path: 'faqs-concessions/insurance', component: InsuranceComponent},
+  {path: 'faqs-concessions/faqs', component: FaqsQuestionsComponent},
   {path: '', redirectTo: 'index', pathMatch: 'full'},
 ];
 

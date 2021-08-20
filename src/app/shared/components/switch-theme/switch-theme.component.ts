@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {AfterContentInit, AfterViewInit, Component, OnInit} from '@angular/core';
 import {SwitchThemeService} from '../../services/switch-theme.service';
 
 // const switchToggle = document.querySelector('#switch-toggle');
@@ -20,20 +20,22 @@ export class SwitchThemeComponent implements OnInit {
 
   switchToggle: HTMLDivElement | null = null;
 
-  constructor(public themeService: SwitchThemeService) {
+  constructor(public switchThemeService: SwitchThemeService) {
   }
 
   ngOnInit(): void {
     this.switchToggle = document.querySelector('#switch-toggle');
-    this.themeService.checkActivateTheme();
-    if (this.themeService.isDarkMode && this.switchToggle) {
-      this.switchToggle.classList.add('bg-gray-700', 'translate-x-full');
-      this.setDarkIcon();
-    }
-    else if (this.switchToggle) {
-      this.switchToggle.classList.add('bg-yellow-500', '-translate-x-2');
-      this.setLightIcon();
-    }
+    setTimeout(() => {
+      this.switchThemeService.checkActivateTheme();
+      if (this.switchThemeService.isDarkMode && this.switchToggle) {
+        this.switchToggle.classList.add('bg-gray-700', 'translate-x-full');
+        this.setDarkIcon();
+      }
+      else if (this.switchToggle) {
+        this.switchToggle.classList.add('bg-yellow-500', '-translate-x-2');
+        this.setLightIcon();
+      }
+    },10);
   }
 
   setDarkIcon(): void {
@@ -54,8 +56,8 @@ export class SwitchThemeComponent implements OnInit {
 
   public switchTheme(event: Event): void {
     event.stopPropagation(); // stop bubble propagation event from html components
-    this.themeService.changeActivateTheme();
-    if (this.themeService.isDarkMode && this.switchToggle) {
+    this.switchThemeService.changeActivateTheme();
+    if (this.switchThemeService.isDarkMode && this.switchToggle) {
       this.switchToggle.classList.remove('bg-yellow-500', '-translate-x-2');
       this.switchToggle.classList.add('bg-gray-700', 'translate-x-full');
       this.setDarkIcon();

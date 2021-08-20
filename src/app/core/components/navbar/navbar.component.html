@@ -22,12 +22,13 @@
       </div>
     </div>
 
-    <div class="bg-white dark:bg-dark absolute inset-x-0 sm:w-auto sm:right-4 sm:relative" [ngClass]="deviceDetectorService.isDesktop() ? '' : showMenu ? 'slide-bottom top-14 pt-5 pb-7 shadow-lg' : 'slide-top'">
-      <ul class="flex flex-col sm:flex-row items-center">
-        <li class="px-1 py-1" *ngFor="let route of routes">
+<!--    <div class="bg-white dark:bg-dark absolute inset-x-0 sm:w-auto sm:right-4 sm:relative" [ngClass]="deviceDetectorService.isDesktop() ? '' : showMenu ? 'slide-bottom top-14 pt-5 pb-7 shadow-lg' : 'slide-top'">-->
+    <div class="bg-white dark:bg-dark mobile-navbar desktop-navbar sm:animate-none" [ngClass]="showMenu ? 'slide-bottom' : 'slide-top'">
+      <div class="flex flex-col sm:flex-row items-center">
+        <div class="menu-item px-1 py-1" *ngFor="let route of routes">
           <a (click)="scroll(route.url)" [href]="route.url" [title]="route.name" class="px-2">{{route.name}}</a>
-        </li>
-      </ul>
+        </div>
+      </div>
     </div>
 
 

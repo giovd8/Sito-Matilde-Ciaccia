@@ -22,7 +22,7 @@ body {
 }
 
 h1 {
-  @apply text-center text-4xl sm:text-6xl py-3;
+  @apply text-center text-4xl sm:text-6xl py-3 md:py-5 lg:py-6;
 }
 
 h2 {
@@ -40,6 +40,11 @@ p {
 //i, svg {
 //  color: var(--green-mati);
 //}
+
+.anchor {
+  @apply relative bottom-40;
+}
+
 
 .custom-text-green {
   color: var(--green-mati);

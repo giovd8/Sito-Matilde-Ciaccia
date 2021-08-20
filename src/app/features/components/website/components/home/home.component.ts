@@ -8,10 +8,11 @@ import {SwitchThemeService} from '../../../../../shared/services/switch-theme.se
 })
 export class HomeComponent implements OnInit {
 
-  constructor(public switchThemeServices: SwitchThemeService) { }
+
+  constructor(public switchThemeServices: SwitchThemeService) {
+  }
 
   ngOnInit(): void {
-
   }
 
 }
