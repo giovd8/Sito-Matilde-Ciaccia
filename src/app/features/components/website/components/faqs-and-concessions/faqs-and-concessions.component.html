@@ -5,14 +5,14 @@
 
       <div *ngFor="let item of faqsAndConcessions" class="mt-10 flex justify-center">
 
-        <div class="custom-card" (click)="item.isClicked=!item.isClicked" [id]="item.id">
+        <div class="custom-container custom-card-bordered" (click)="item.isClicked=!item.isClicked" [id]="item.id">
 
-          <div *ngIf="!item.isClicked" class="flip-vertical-left">
+          <div *ngIf="!item.isClicked" class="flipInY">
 <!--            <i class="{{item.icon}} fa-2x bg-white dark:bg-dark"></i>-->
             <h2 class="relative bottom-10">{{item.shortText}}</h2>
           </div>
 
-          <div *ngIf="item.isClicked" class="flip-vertical-left">
+          <div *ngIf="item.isClicked" class="flipInY">
             <p>{{item.longText}}</p>
             <p *ngIf="item.navigatePage !== ''" class="custom-link" (click)="router.navigate([item.navigatePage])">
               Maggiori informazioni
