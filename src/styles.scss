@@ -2,19 +2,14 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
-//@import 'node_modules/font-awesome/css/font-awesome.css';
-//@import 'assets/font-awesome-4.7.0/css/font-awesome.min.css';
 
-//
-//:root {
-//  --dark-color: #2b2b2b;
-//}
-//
-//$dark: #2b2b2b;
 
+
+// generals
 
 :root {
   --green-mati: #a0bd60;
+  --dark-color: #2b2b2b;
 }
 
 body {
@@ -37,9 +32,6 @@ p {
   @apply custom-text-green cursor-pointer inline-block;
 }
 
-//i, svg {
-//  color: var(--green-mati);
-//}
 
 .anchor {
   @apply relative bottom-40;
@@ -77,7 +69,7 @@ p {
 
 .section-title {
   color: var(--green-mati);
-  @apply text-justify pb-4 text-lg sm:text-2xl font-light;
+  @apply text-justify pb-4 text-lg sm:text-2xl font-light flex items-center justify-center;
 }
 
 .section-item {
@@ -99,7 +91,7 @@ p {
 
 
 
-//parallax effect
+// parallax effect
 
 .parallax-wrapper {
   @apply h-screen overflow-x-hidden overflow-y-auto;
@@ -116,3 +108,52 @@ p {
   transform: translateZ(-1px) scale(1.5);
   z-index: -1;
 }
+
+
+
+// animations
+
+.tracking-in-expand-fwd-enter {
+  -webkit-animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+.tracking-in-expand-fwd-leave {
+  -webkit-animation: tracking-in-expand-fwd 0.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  animation: tracking-in-expand-fwd 0.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@-webkit-keyframes tracking-in-expand-fwd {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px);
+    transform: translateZ(-700px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand-fwd {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px);
+    transform: translateZ(-700px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+

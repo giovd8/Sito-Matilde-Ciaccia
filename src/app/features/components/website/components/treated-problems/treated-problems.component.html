@@ -1,71 +1,19 @@
-<div class="bg-white dark:bg-dark mt-36" id="problemi-trattati">
+<div class="bg-white dark:bg-dark mt-36">
   <h1 class="custom-text-green py-8">Problemi trattati</h1>
+  <div class="anchor" id="problemi-trattati"></div>
   <div class="flex flex-col sm:grid sm:grid-cols-2 gap-1 py-1">
-    <div class="card-image-container bg-dipendenze-conportamentali">
-      <div class="custom-container-opacity max-w-xl w-full">
-        <div class="section-title">Dipendenze comportamentali</div>
-        <div id="dipendenze-comportamentali" class="anchor"></div>
-        <div class="section-item">
-          <div class="custom-link" (click)="router.navigate(['dipendenze-comportamentali/dipendenza-sessuale'])">Dipendenza sessuale</div>
-        </div>
-        <div class="section-item">
-          <div class="custom-link" (click)="router.navigate(['dipendenze-comportamentali/dipendenza-da-internet'])">Dipendenza da internet</div>
-        </div>
-        <div class="section-item">Dipendenza da gioco d'azzardo</div>
-      </div>
-    </div>
-    <div class="card-image-container bg-disturbi-del-comportamento-alimentare" id="disturbi-del-comportamento-alimentare">
-      <div class="custom-container-opacity max-w-xl w-full">
-        <div class="section-title">Disturbi del comportamento alimentare</div>
-        <div class="section-item">Anoressia</div>
-        <div class="section-item">Bulimia</div>
-        <div class="section-item">Binge-eating</div>
-        <div class="section-item">
-          <div class="custom-link" (click)="router.navigate(['disturbi-del-comportamento-alimentare'])">Maggiori informazioni</div>
+    <ng-container  *ngFor="let section of html">
+      <div class="card-image-container" [class]="section.background">
+        <div class="custom-container-opacity max-w-xl w-full"  (click)="section.clicked=!section.clicked">
+          <div class="section-title pb-0 tracking-in-expand-fwd-enter h-20 text-center" *ngIf="!section.clicked">{{section.title}}</div>
+          <ng-container *ngFor="let items of section.items">
+            <div class="tracking-in-expand-fwd-leave"  *ngIf="section.clicked" >
+              <div class="section-item" [innerHTML]="items"></div>
+            </div>
+          </ng-container>
         </div>
       </div>
-    </div>
-    <div class="card-image-container bg-problemi-di-coppia" id="problemi-di-coppia">
-      <div class="custom-container-opacity max-w-xl w-full">
-        <div class="section-title custom-link">Problemi di coppia</div>
-        <div class="section-item">Conflitti di coppia</div>
-        <div class="section-item">
-          <div class="custom-link" (click)="router.navigate(['problemi-di-coppia/dipendenza-affettiva'])">Dipendenza affettiva</div>
-        </div>
-        <div class="section-item">Violenza domestica</div>
-
-      </div>
-    </div>
-    <div class="card-image-container bg-dipendenza-da-sostanze" id="dipendenza-da-sostanze">
-      <div class="custom-container-opacity max-w-xl w-full">
-        <div class="section-title">Dipendenza da sostanze</div>
-        <div class="section-item">Alcol</div>
-        <div class="section-item">Cocaina</div>
-        <div class="section-item">Altre sostanze psicoattive</div>
-        <div class="section-item">
-          <div class="custom-link" (click)="router.navigate(['dipendenza-da-sostanze'])">Maggiori informazioni</div>
-        </div>
-      </div>
-    </div>
-    <div class="card-image-container bg-adoloscenza-e-genitorialita" id="adoloscenza-e-genitorialita">
-      <div class="custom-container-opacity max-w-xl w-full">
-        <div class="section-title">Adoloscenza e genitoralità</div>
-        <div class="section-item">Hikkikomori</div>
-        <div class="section-item">Cyber-bullismo</div>
-        <div class="section-item">Sexting</div>
-        <div class="section-item">
-          <div class="custom-link" (click)="router.navigate(['adoloscenza-e-genitorialita'])">Maggiori informazioni</div>
-        </div>
-      </div>
-    </div>
-    <div class="card-image-container bg-consulenza-tecnica">
-      <div class="custom-container-opacity max-w-xl w-full">
-        <div class="section-title">Consulenza tecnica</div>
-        <div class="section-item">Separazione e divorzi</div>
-        <div class="section-item">Affidamenti</div>
-        <div class="section-item">Adozioni</div>
-      </div>
-    </div>
+    </ng-container>
   </div>
 </div>
 
