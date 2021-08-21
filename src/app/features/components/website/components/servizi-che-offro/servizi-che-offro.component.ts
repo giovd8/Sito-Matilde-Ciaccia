@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
+import {NavigationItem} from "../../../../../shared/interfaces";
 
 @Component({
   selector: 'app-servizi-che-offro',
@@ -8,26 +9,52 @@ import {Router} from "@angular/router";
 })
 export class ServiziCheOffroComponent implements OnInit {
 
-  html = [
+  html: NavigationItem[] = [
     {
+      id:'attivita-clinica',
       title: 'Attività clinica',
       background: 'bg-attivita-clinica',
       items: [
-        `<div class="custom-link" (click)="router.navigate(['servizi-offerti/consulenza-psicologica'])">Consulenza psicologica e online</div>`,
-        `<div class="custom-link" (click)="router.navigate(['servizi-offerti/valutazione-psicodiagnostica'])">Valutazione psicodiagnostica</div>`,
-        `<div class="custom-link" (click)="router.navigate(['servizi-offerti/parent-training'])">Parent training</div>`,
-        ` <div class="custom-link" (click)="router.navigate(['servizi-offerti/crescita-personale'])">Percorso psicologico di crescita personale</div>`
+        {
+          navigatePage: 'servizi-offerti/consulenza-psicologica',
+          text: 'Consulenza psicologica e online'
+        },
+        {
+          navigatePage: 'servizi-offerti/valutazione-psicodiagnostica',
+          text: 'Valutazione psicodiagnostica'
+        },
+        {
+          navigatePage: 'servizi-offerti/parent-training',
+          text: 'Parent training'
+        },
+        {
+          navigatePage: 'servizi-offerti/crescita-personale',
+          text: 'Percorso psicologico di crescita personale'
+        },
       ],
       clicked: false
     },
     {
+      id:'attivita-forense',
       title: 'Attività forense',
       background: 'bg-attivita-forense',
       items: [
-        `<ng-container>Colloqui di valutazione delle competenze genitoriali</ng-container>`,
-        `<ng-container>Colloqui con minori</ng-container>`,
-        `<ng-container>Valutazione psicodiagnostica</ng-container>`,
-        `<ng-container>Stesura relazione</ng-container>`
+        {
+          navigatePage: '',
+          text: 'Colloqui di valutazione delle competenze genitoriali'
+        },
+        {
+          navigatePage: '',
+          text: 'Colloqui con minori'
+        },
+        {
+          navigatePage: '',
+          text: 'Valutazione psicodiagnostica'
+        },
+        {
+          navigatePage: '',
+          text: 'Stesura relazione'
+        },
       ],
       clicked: false
     }

@@ -20,11 +20,8 @@ export class WebsiteComponent implements OnInit, OnDestroy {
     body.style.position = 'fixed';
     if (this.navigationService.getNavigateId() !== ''){
       const element = document.querySelector(`#${this.navigationService.getNavigateId()}`);
-      console.log(this.navigationService.getNavigateId());
       if (element) {
         element.scrollIntoView();
-        // const offsetY = element.getBoundingClientRect().top;
-        // window.scrollTo({top: offsetY});
       }
     }
   }

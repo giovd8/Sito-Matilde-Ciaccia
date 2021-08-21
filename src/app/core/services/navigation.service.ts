@@ -10,7 +10,6 @@ export class NavigationService {
   constructor() { }
 
   setNavigateId(id: string): void {
-    console.log("ID", id);
     this.navigateToId = id;
   }
 

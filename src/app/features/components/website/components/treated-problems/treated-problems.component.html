@@ -4,11 +4,18 @@
   <div class="flex flex-col sm:grid sm:grid-cols-2 gap-1 py-1">
     <ng-container  *ngFor="let section of html">
       <div class="card-image-container" [class]="section.background">
-        <div class="custom-container-opacity max-w-xl w-full"  (click)="section.clicked=!section.clicked">
+        <div class="custom-container-opacity max-w-xl w-full" (click)="section.clicked=!section.clicked">
           <div class="section-title pb-0 tracking-in-expand-fwd-enter h-20 text-center" *ngIf="!section.clicked">{{section.title}}</div>
-          <ng-container *ngFor="let items of section.items">
-            <div class="tracking-in-expand-fwd-leave"  *ngIf="section.clicked" >
-              <div class="section-item" [innerHTML]="items"></div>
+          <ng-container *ngFor="let item of section.items">
+            <div class="tracking-in-expand-fwd-enter"  *ngIf="section.clicked" >
+              <div class="section-item">
+                <div class="custom-link" *ngIf="item.navigatePage.length>0" (click)="router.navigate([item.navigatePage])">
+                  {{item.text}}
+                </div>
+                <ng-container *ngIf="item.navigatePage.length===0">
+                  {{item.text}}
+                </ng-container>
+              </div>
             </div>
           </ng-container>
         </div>
