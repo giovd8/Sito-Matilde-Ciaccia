@@ -18,7 +18,6 @@ export class WebsiteComponent implements OnInit, AfterViewInit, OnDestroy {
     const body = document.querySelector('body') as HTMLElement;
     body.style.overflowY = 'hidden';
     body.style.position = 'fixed';
-
   }
 
 

@@ -46,7 +46,7 @@ export class NavbarComponent implements OnInit {
     }
   ];
 
-  constructor(private router: Router, public deviceDetectorService: DeviceDetectorService) { }
+  constructor(public router: Router, public deviceDetectorService: DeviceDetectorService) { }
 
   ngOnInit(): void {
   }
@@ -61,11 +61,11 @@ export class NavbarComponent implements OnInit {
     if (!currentRoute.includes('index')) {
       this.router.navigate(['index']);
       setTimeout(() => {
-        document.querySelector(route)?.scrollIntoView({behavior: 'smooth', block: 'end', inline: 'nearest'});
+        document.querySelector(route)?.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
       }, 50);
     }
     else {
-      document.querySelector(route)?.scrollIntoView({behavior: 'smooth', block: 'end', inline: 'nearest'});
+      document.querySelector(route)?.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
     }
   }
 
