@@ -1,6 +1,4 @@
 import {AfterViewInit, Component, OnDestroy, OnInit} from '@angular/core';
-// import AOS from 'aos';
-// import 'aos/dist/aos.css';
 import {NavigationService} from "../../../core/services/navigation.service";
 
 
@@ -19,7 +17,6 @@ export class WebsiteComponent implements OnInit, AfterViewInit, OnDestroy {
     body.style.overflowY = 'hidden';
     body.style.position = 'fixed';
   }
-
 
   ngOnDestroy(): void {
     const body = document.querySelector('body') as HTMLElement;
