@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 
 interface CardItem {
-  icon: string;
-  shortText: string;
+  id: string;
+  background: string;
+  title: string;
   longText: string;
   navigatePage: string;
-  isClicked: boolean;
+  clicked: boolean;
 }
 
 @Component({
@@ -17,28 +18,31 @@ interface CardItem {
 
 export class FaqsAndConcessionsComponent implements OnInit {
 
-  faqsAndConcessions: CardItem[] = [
+  html: CardItem[] = [
     {
-      icon: 'fas fa-hand-holding-medical',
-      shortText: 'Assicurazione',
+      id: 'insurance',
+      background: 'bg-assicurazione',
+      title: 'Assicurazione',
       longText: 'Per affrontare le eventuali difficoltà nel sostenere i costi di un percorso psicologico, ci sono aziende che offrono ai loro collaboratori polizze assicurative che prevedono forme di rimborso o di copertura di sedute psicologiche.',
-      navigatePage: 'faqs-concessions/insurance',
-      isClicked: false
+      navigatePage: 'insurance',
+      clicked: false
     },
     {
-      icon: 'fas fa-hand-holding-usd',
-      shortText: 'Faqs',
+      id: 'faqs',
+      background: 'bg-faqs',
+      title: 'Faqs',
       longText: 'Hai qualche domanda? Ho preparato una lista con le domande che più frequentemente mi vengono chieste.',
-      navigatePage: 'faqs-concessions/faqs',
-      isClicked: false
+      navigatePage: 'faqs',
+      clicked: false
     },
     {
-      icon: 'fas fa-question',
-      shortText: 'Pagamenti e detrazioni',
+      id: 'pagamenti-detrazioni',
+      background: 'bg-pagamenti-e-detrazioni',
+      title: 'Pagamenti e detrazioni',
       longText: 'Le prestazioni psicologiche sono prestazioni sanitarie, per cui puoi usufruire di una detrazione fiscale pari al 19% della spesa sostenuta, pagando tramite sistemi tracciabili previsti dal D. Lgs. 2241/1997, quali pagamento con POS, bonifico bancario o postale.\n' +
         'Al momento accetto bonifico bancario o postale.',
       navigatePage: '',
-      isClicked: false
+      clicked: false
     }
   ];
 

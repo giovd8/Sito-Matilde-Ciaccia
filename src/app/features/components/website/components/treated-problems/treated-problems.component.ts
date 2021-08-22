@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
-import {getTransformedQueryCallExpr} from "@angular/core/schematics/migrations/static-queries/transform";
-import {DomSanitizer} from "@angular/platform-browser";
 import {NavigationItem} from "../../../../../shared/interfaces";
 
 @Component({
@@ -17,8 +15,8 @@ export class TreatedProblemsComponent implements OnInit {
       title: 'Dipendenze comportamentali',
       background: 'bg-dipendenze-conportamentali',
       items: [
-        { navigatePage: 'problemi-trattati/dipendenza-sessuale', text: 'Dipendenza sessuale'},
-        { navigatePage: 'problemi-trattati/dipendenza-da-internet', text: 'Dipendenza da internet'},
+        { navigatePage: 'dipendenze-comportamentali/dipendenza-sessuale', text: 'Dipendenza sessuale'},
+        { navigatePage: 'dipendenze-comportamentali/dipendenza-da-internet', text: 'Dipendenza da internet'},
         { navigatePage: '', text: 'Dipendenza da gioco d\'azzardo'},
       ],
       clicked: false
@@ -31,7 +29,7 @@ export class TreatedProblemsComponent implements OnInit {
         { navigatePage: '', text: 'Anoressia'},
         { navigatePage: '', text: 'Bulimia'},
         { navigatePage: '', text: 'Binge-eating'},
-        { navigatePage: 'problemi-trattati/disturbi-del-comportamento-alimentare', text: 'Maggiori informazioni'}
+        { navigatePage: 'disturbi-del-comportamento-alimentare', text: 'Maggiori informazioni'}
       ],
       clicked: false
     },
@@ -43,7 +41,7 @@ export class TreatedProblemsComponent implements OnInit {
         { navigatePage: '', text: 'Alcol'},
         { navigatePage: '', text: 'Cocaina'},
         { navigatePage: '', text: 'Altre sostanze psicoattive'},
-        { navigatePage: 'problemi-trattati/dipendenza-da-sostanze', text: 'Maggiori informazioni'}
+        { navigatePage: 'dipendenza-da-sostanze', text: 'Maggiori informazioni'}
 
       ],
       clicked: false
@@ -54,7 +52,7 @@ export class TreatedProblemsComponent implements OnInit {
       background: 'bg-problemi-di-coppia',
       items: [
         { navigatePage: '', text: 'Conflitti di coppia'},
-        { navigatePage: 'problemi-trattati/dipendenza-affettiva', text: 'Dipendenza affettiva'},
+        { navigatePage: 'problemi-di-coppia/dipendenza-affettiva', text: 'Dipendenza affettiva'},
         { navigatePage: '', text: 'Violenza domestica'},
       ],
       clicked: false
@@ -67,7 +65,7 @@ export class TreatedProblemsComponent implements OnInit {
         { navigatePage: '', text: 'Hikkikomori'},
         { navigatePage: '', text: 'Cyber-bullismo'},
         { navigatePage: '', text: 'Sexting'},
-        { navigatePage: 'problemi-trattati/adoloscenza-e-genitorialita', text: 'Maggiori informazioni'},
+        { navigatePage: 'adoloscenza-e-genitorialita', text: 'Maggiori informazioni'},
       ],
       clicked: false
     },
