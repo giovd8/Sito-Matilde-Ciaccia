@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {SwitchThemeService} from '../../../shared/services/switch-theme.service';
 import {Router} from "@angular/router";
+import {DeviceDetectorService} from "ngx-device-detector";
 
 type Routes = {
   name: string,
@@ -28,8 +29,16 @@ export class NavbarComponent implements OnInit {
       url: '#about-me'
     },
     {
+      name: 'Problemi trattati',
+      url: '#problemi-trattati'
+    },
+    {
+      name: 'Servizi',
+      url: '#servizi-offerti'
+    },
+    {
       name: 'Agevolazioni & FAQs',
-      url: '#faqs'
+      url: '#faqs-concessions'
     },
     {
       name: 'Contatti',
@@ -37,21 +46,26 @@ export class NavbarComponent implements OnInit {
     }
   ];
 
-  constructor(private router: Router) { }
+  constructor(public router: Router, public deviceDetectorService: DeviceDetectorService) { }
 
   ngOnInit(): void {
   }
 
   public scroll(route: string): void {
+    // this.showMenu = false;
     const currentRoute = this.router.url;
+    const menuButton = document.querySelector('#menu-button') as HTMLButtonElement;
+    if (menuButton) {
+      menuButton.click();
+    }
     if (!currentRoute.includes('index')) {
       this.router.navigate(['index']);
       setTimeout(() => {
-        document.querySelector(route).scrollIntoView({behavior: 'smooth', block: 'end', inline: 'nearest'});
+        document.querySelector(route)?.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
       }, 50);
     }
     else {
-      document.querySelector(route).scrollIntoView({behavior: 'smooth', block: 'end', inline: 'nearest'});
+      document.querySelector(route)?.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
     }
   }
 

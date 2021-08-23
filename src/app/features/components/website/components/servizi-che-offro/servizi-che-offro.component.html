@@ -1,0 +1,24 @@
+<div class="bg-white dark:bg-dark" id="servizi-offerti">
+  <h1 class="custom-text-green py-8">Servizi offerti</h1>
+  <div class="grid grid-cols-1 sm:grid-cols-2">
+    <ng-container  *ngFor="let section of html">
+      <div class="card-image-container" [class]="section.background" id="{{section.id}}}">
+        <div class="custom-container-opacity max-w-xl w-full"  (click)="section.clicked=!section.clicked">
+          <div class="section-title pb-0 tracking-in-expand h-20 text-center" *ngIf="!section.clicked">{{section.title}}</div>
+          <ng-container *ngFor="let item of section.items">
+            <div class="tracking-in-expand flex flex-col text-justify"  *ngIf="section.clicked" >
+              <div class="section-item">
+                <div class="custom-link" *ngIf="item.navigatePage.length>0" (click)="router.navigate([item.navigatePage])">
+                  {{item.text}}
+                </div>
+                <ng-container *ngIf="item.navigatePage.length===0">
+                  {{item.text}}
+                </ng-container>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>

@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import {ExtraOptions, PreloadAllModules, RouterModule, Routes} from '@angular/router';
 
-export const routes: Routes = [
-  {path: '', loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule)},
+const routes: Routes = [
+  {path: '', loadChildren: () => import('./features/features.module').then(m => m.FeaturesModule)},
   {path: '**', redirectTo: ''},
 ];
 
-export const routerConfig: ExtraOptions = {
+const routerConfig: ExtraOptions = {
   scrollPositionRestoration: 'enabled',
   preloadingStrategy: PreloadAllModules,
   useHash: true
