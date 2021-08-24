@@ -27,7 +27,7 @@ import { PercorsoCrescitaPersonaleComponent } from './components/website/compone
 
 const routes: Routes = [
   {path: 'index', component: WebsiteComponent},
-  {path: 'about-me/index', component: AboutMeInDeptComponent},
+  {path: 'about-me/page', component: AboutMeInDeptComponent},
   {path: 'dipendenze-comportamentali/dipendenza-sessuale', component: DipendenzaSessualeComponent},
   {path: 'dipendenze-comportamentali/dipendenza-da-internet', component: DipendenzaDaInternetComponent},
   {path: 'disturbi-del-comportamento-alimentare', component: DisturbiDelComportamentoAlimentareComponent},

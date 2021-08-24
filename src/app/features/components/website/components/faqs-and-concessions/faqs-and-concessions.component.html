@@ -1,35 +1,7 @@
-<!--<div id="faqs-concessions" class="section parallax mt-96 background-faq">-->
-<!--  <div class="custom-container-opacity w-screen">-->
-<!--      <h1 class="custom-text-green py-8">Agevolazioni e FAQs</h1>-->
-<!--      <h2>Alcune risposte alle tue domande</h2>-->
-
-<!--      <div *ngFor="let item of html" class="mt-10 flex justify-center">-->
-
-<!--        <div class="custom-container custom-card-bordered" (click)="item.clicked=!item.clicked" >-->
-
-<!--          <div *ngIf="!item.clicked" class="tracking-in-expand h-20 flex items-center justify-center">-->
-<!--            <h2>{{item.title}}</h2>-->
-<!--          </div>-->
-
-<!--          <div *ngIf="item.clicked" class="tracking-in-expand flex flex-col items-center">-->
-<!--            <p>{{item.longText}}</p>-->
-<!--            <p *ngIf="item.navigatePage !== ''" class="custom-link inline-block" (click)="router.navigate([item.navigatePage])">-->
-<!--              Maggiori informazioni-->
-<!--            </p>-->
-<!--          </div>-->
-
-<!--        </div>-->
-
-<!--      </div>-->
-
-<!--    </div>-->
-<!--  </div>-->
-
-
 <div id="faqs-concessions" class="bg-white dark:bg-dark pb-10">
   <h1 class="custom-text-green py-8">Agevolazioni e FAQs</h1>
   <h2 class="mb-4">Alcune risposte alle tue domande</h2>
-  <div class="flex flex-col sm:grid sm:grid-cols-2 xl:grid-cols-3 gap-1 py-1">
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-1 py-1">
       <div *ngFor="let section of html" id="{{section.id}}">
         <div class="card-image-container" [class]="section.background">
           <div class="custom-container-opacity max-w-xl w-full" (click)="section.clicked=!section.clicked" >

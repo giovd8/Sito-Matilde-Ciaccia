@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {SwitchThemeService} from '../../../shared/services/switch-theme.service';
 import {Router} from "@angular/router";
-import {DeviceDetectorService} from "ngx-device-detector";
 
 type Routes = {
   name: string,
@@ -46,7 +44,7 @@ export class NavbarComponent implements OnInit {
     }
   ];
 
-  constructor(public router: Router, public deviceDetectorService: DeviceDetectorService) { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -70,5 +68,8 @@ export class NavbarComponent implements OnInit {
   }
 
 
+  refresh(): void {
+    window.location.reload();
+  }
 }
 
