@@ -1,6 +1,6 @@
 <div *ngIf="activeArticle$ | async as article" class="custom-container">
   <h1 class="custom-text-green">{{article.title}}</h1>
-  <p [innerText]="article.text" class="font-normal pt-4 pb-0"></p>
+  <p [innerText]="article.text" class="pt-4 pb-0"></p>
   <app-came-back-button></app-came-back-button>
 </div>
 

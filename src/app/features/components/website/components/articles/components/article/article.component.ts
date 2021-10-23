@@ -17,9 +17,6 @@ interface Article {
 export class ArticleComponent implements OnInit {
 
   activeArticle$ = new BehaviorSubject<Article>({route: '', title: '', text: ''});
-  article: Article = {route: '', title: '', text: ''};
-
-  articles$ = new BehaviorSubject<Article[]>([]);
 
   constructor(private readonly articleService: ArticleService, private activatedRoute: ActivatedRoute) {
   }
@@ -28,7 +25,6 @@ export class ArticleComponent implements OnInit {
     this.articleService.getArticles();
     this.articleService.articles$.subscribe((articles: Article[]) => {
       const activeArticle = articles.find((article: Article) => article.route === this.activatedRoute.snapshot.params.articleRoute);
-      console.log(activeArticle);
       if (activeArticle) {
         this.activeArticle$.next(activeArticle)
       }

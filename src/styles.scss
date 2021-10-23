@@ -4,7 +4,6 @@
 @import 'tailwindcss/utilities';
 
 
-
 // generals
 
 :root {
@@ -40,6 +39,10 @@ p {
 
 .custom-text-green {
   color: var(--green-mati);
+}
+
+.custom-border-green {
+  border-color: var(--green-mati);
 }
 
 .custom-container {
@@ -84,11 +87,10 @@ p {
   @apply flex px-2 py-2 flex-1 items-center max-w-lg;
 }
 
-.custom-card-bordered{
+.custom-card-bordered {
   @apply border w-full max-w-4xl;
   border-color: var(--green-mati);
 }
-
 
 
 // parallax effect
@@ -129,6 +131,7 @@ p {
     opacity: 1;
   }
 }
+
 @keyframes tracking-in-expand {
   0% {
     letter-spacing: -0.5em;

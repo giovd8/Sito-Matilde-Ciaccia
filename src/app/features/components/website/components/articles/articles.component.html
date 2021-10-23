@@ -1,17 +1,19 @@
-<ng-container *ngIf="articles$ | async as articles">
-  <app-divider></app-divider>
-  <div id="blog" class="bg-white dark:bg-dark pb-10" >
-    <h1 class="custom-text-green py-8">Il mio blog</h1>
-    <h2 class="mb-4">Clicca su uno degli articoli per maggiori informazioni</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-      <ng-container  *ngFor="let article of articles">
-        <div class="article-container p-4 cursor-pointer" (click)="navigateToArticle(article)">
-          <div class="border-2 border-black p-4 bg-white dark:bg-dark">
-            <h2 class="section-title mb-2 text-center">{{article.title}}</h2>
-            <p>{{article.text}}</p>
+<app-divider></app-divider>
+<div class="bg-white dark:bg-dark pb-10" id="blog">
+  <h1 class="custom-text-green py-8">Il mio blog</h1>
+  <h2 class="mb-4">Clicca su uno degli articoli per maggiori informazioni</h2>
+  <div class="p-2">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 p-2">
+      <ng-container *ngIf="articles$ | async as articles">
+        <ng-container *ngFor="let article of articles">
+          <div (click)="navigateToArticle(article)" class="article-container p-4 cursor-pointer">
+            <div class="border p-4 bg-white dark:bg-dark custom-border-green">
+              <h2 class="section-title mb-2 text-center">{{article.title}}</h2>
+              <p class="h-28 sm:h-36 lg:h-44 overflow-ellipsis overflow-hidden">{{article.text}}</p>
+            </div>
           </div>
-        </div>
+        </ng-container>
       </ng-container>
     </div>
   </div>
-</ng-container>
+</div>

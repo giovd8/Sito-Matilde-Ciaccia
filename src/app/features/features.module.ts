@@ -44,7 +44,7 @@ const routes: Routes = [
   {path: 'servizi-offerti/crescita-personale', component: PercorsoCrescitaPersonaleComponent},
   {path: 'insurance', component: InsuranceComponent},
   {path: 'faqs', component: FaqsQuestionsComponent},
-  {path: 'articles/:articleRoute', component: ArticleComponent},
+  {path: 'blog/:articleRoute', component: ArticleComponent},
   {path: '', redirectTo: 'index', pathMatch: 'full'},
 ];
 

@@ -29,6 +29,6 @@ export class ArticlesComponent implements OnInit {
   }
 
   navigateToArticle(article: Article): void {
-    this.router.navigate([`articles/${article.route}`]);
+    this.router.navigate([`blog/${article.route}`]);
   }
 }

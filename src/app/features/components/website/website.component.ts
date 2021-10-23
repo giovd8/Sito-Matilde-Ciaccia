@@ -26,7 +26,7 @@ export class WebsiteComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit(): void {
-    if (this.navigationService.getNavigateId() !== ''){
+    if (this.navigationService.getNavigateId() !== '') {
       const element = document.querySelector(`#${this.navigationService.getNavigateId()}`) as HTMLDivElement;
       if (element) {
         element.scrollIntoView();
