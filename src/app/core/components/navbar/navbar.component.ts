@@ -37,8 +37,12 @@ export class NavbarComponent implements OnInit {
       url: '#servizi-offerti'
     },
     {
-      name: 'Agevolazioni & FAQs',
+      name: 'FAQs',
       url: '#faqs-concessions'
+    },
+    {
+      name: 'Blog',
+      url: '#blog'
     },
     {
       name: 'Contatti',

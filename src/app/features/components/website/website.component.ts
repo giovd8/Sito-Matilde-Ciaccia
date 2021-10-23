@@ -1,6 +1,6 @@
 import {AfterViewInit, Component, OnDestroy, OnInit} from '@angular/core';
 import {NavigationService} from "../../../core/services/navigation.service";
-import {ArticleService} from "../../../core/services/article.service";
+import {ArticleService} from "./components/articles/services/article.service";
 
 @Component({
   selector: 'app-website',

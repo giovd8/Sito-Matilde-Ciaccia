@@ -1,9 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import {HttpClient, HttpClientModule} from "@angular/common/http";
-import {Observable, Subject} from "rxjs";
-import {share} from "rxjs/operators";
+import {Component, OnInit} from '@angular/core';
+import {Subject} from "rxjs";
 import {Router} from "@angular/router";
-import {ArticleService} from "../../../../../core/services/article.service";
+import {ArticleService} from "./services/article.service";
+
 
 interface Article {
   route: string;
@@ -20,7 +19,8 @@ interface Article {
 export class ArticlesComponent implements OnInit {
   articles$ = new Subject<Article[]>();
 
-  constructor(private readonly router: Router, private readonly articleService: ArticleService) { }
+  constructor(private readonly router: Router, private readonly articleService: ArticleService) {
+  }
 
   ngOnInit(): void {
     this.articleService.articles$.subscribe((res: any) => {

@@ -1,6 +1,7 @@
-import {AfterViewChecked, AfterViewInit, Component, OnInit} from '@angular/core';
-import {ArticleService} from "../../../../../../../core/services/article.service";
-import {BehaviorSubject, Subject} from "rxjs";
+import {Component, OnInit} from '@angular/core';
+import {BehaviorSubject} from "rxjs";
+import {ArticleService} from "../../services/article.service";
+import {ActivatedRoute} from "@angular/router";
 
 interface Article {
   route: string;
@@ -13,23 +14,26 @@ interface Article {
   templateUrl: './article.component.html',
   styleUrls: ['./article.component.scss'],
 })
-export class ArticleComponent implements OnInit, AfterViewChecked {
+export class ArticleComponent implements OnInit {
 
-  activeArticle$ = new Subject<Article>();
-  article: Article = {route:'', title: '', text:''}
+  activeArticle$ = new BehaviorSubject<Article>({route: '', title: '', text: ''});
+  article: Article = {route: '', title: '', text: ''};
 
-  constructor(private articleService: ArticleService) {
+  articles$ = new BehaviorSubject<Article[]>([]);
+
+  constructor(private readonly articleService: ArticleService, private activatedRoute: ActivatedRoute) {
   }
-
 
   ngOnInit(): void {
-    this.articleService.articles$.subscribe(res => {
-      console.log(res);
+    this.articleService.articles$.subscribe((articles: Article[]) => {
+      const activeArticle = articles.find((article: Article) => article.route === this.activatedRoute.snapshot.params.articleRoute);
+      console.log(activeArticle);
+      if (activeArticle) {
+        this.activeArticle$.next(activeArticle)
+      }
     });
-  }
-
-  ngAfterViewChecked() {
 
   }
+
 
 }
