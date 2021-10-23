@@ -24,6 +24,9 @@ import { SostegnoPsicologicoComponent } from './components/website/components/se
 import { ValutazionePsicodiagnosticaComponent } from './components/website/components/servizi-che-offro/components/valutazione-psicodiagnostica/valutazione-psicodiagnostica.component';
 import { ParentTrainingComponent } from './components/website/components/servizi-che-offro/components/parent-training/parent-training.component';
 import { PercorsoCrescitaPersonaleComponent } from './components/website/components/servizi-che-offro/components/percorso-crescita-personale/percorso-crescita-personale.component';
+import { ArticlesComponent } from './components/website/components/articles/articles.component';
+import {ArticleComponent} from "./components/website/components/articles/components/article/article.component";
+import {HttpClientModule} from "@angular/common/http";
 
 const routes: Routes = [
   {path: 'index', component: WebsiteComponent},
@@ -41,6 +44,7 @@ const routes: Routes = [
   {path: 'servizi-offerti/crescita-personale', component: PercorsoCrescitaPersonaleComponent},
   {path: 'insurance', component: InsuranceComponent},
   {path: 'faqs', component: FaqsQuestionsComponent},
+  {path: 'article/:article-route', component: ArticleComponent},
   {path: '', redirectTo: 'index', pathMatch: 'full'},
 ];
 
@@ -67,11 +71,14 @@ const routes: Routes = [
     SostegnoPsicologicoComponent,
     ValutazionePsicodiagnosticaComponent,
     ParentTrainingComponent,
-    PercorsoCrescitaPersonaleComponent
+    PercorsoCrescitaPersonaleComponent,
+    ArticleComponent,
+    ArticlesComponent,
   ],
   imports: [
     CommonModule,
     SharedModule,
+    HttpClientModule,
     RouterModule.forChild(routes),
   ]
 })
