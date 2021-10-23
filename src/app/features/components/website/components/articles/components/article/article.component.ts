@@ -25,6 +25,7 @@ export class ArticleComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.articleService.getArticles();
     this.articleService.articles$.subscribe((articles: Article[]) => {
       const activeArticle = articles.find((article: Article) => article.route === this.activatedRoute.snapshot.params.articleRoute);
       console.log(activeArticle);
