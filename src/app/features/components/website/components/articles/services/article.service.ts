@@ -7,6 +7,7 @@ interface Article {
   route: string;
   title: string;
   text: string;
+  image: string;
 }
 
 @Injectable({

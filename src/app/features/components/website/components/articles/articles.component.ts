@@ -3,12 +3,11 @@ import {Subject} from "rxjs";
 import {Router} from "@angular/router";
 import {ArticleService} from "./services/article.service";
 
-
 interface Article {
   route: string;
   title: string;
-  img: string;
   text: string;
+  image: string;
 }
 
 @Component({

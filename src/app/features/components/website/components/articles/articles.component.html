@@ -6,8 +6,16 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 p-2">
       <ng-container *ngIf="articles$ | async as articles">
         <ng-container *ngFor="let article of articles">
-          <div (click)="navigateToArticle(article)" class="article-container p-4 cursor-pointer">
-            <div class="border p-4 bg-white dark:bg-dark custom-border-green">
+          <div (click)="navigateToArticle(article)" [ngStyle]="
+                {
+                    'animation-duration': 0.5+'s',
+                    'background-image': 'url(' + article.image + ')',
+                    'background-repeat': 'no-repeat',
+                    'background-position': '60% 50%',
+                    'background-size': 'auto 100% '
+                }"
+               class="article-container p-4 cursor-pointer">
+            <div class="border p-4 custom-border-green custom-container-opacity">
               <h2 class="section-title mb-2 text-center">{{article.title}}</h2>
               <p class="h-28 sm:h-36 lg:h-44 overflow-ellipsis overflow-hidden">{{article.text}}</p>
             </div>

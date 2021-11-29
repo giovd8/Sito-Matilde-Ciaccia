@@ -7,6 +7,7 @@ interface Article {
   route: string;
   title: string;
   text: string;
+  image: string;
 }
 
 @Component({
@@ -16,7 +17,7 @@ interface Article {
 })
 export class ArticleComponent implements OnInit {
 
-  activeArticle$ = new BehaviorSubject<Article>({route: '', title: '', text: ''});
+  activeArticle$ = new BehaviorSubject<Article>({route: '', title: '', text: '', image: ''});
 
   constructor(private readonly articleService: ArticleService, private activatedRoute: ActivatedRoute) {
   }
